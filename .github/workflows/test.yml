@@ -1,0 +1,19 @@
+name: testing process
+on: workflow_dispatch
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+        - name: check code
+          uses: actions/checkout@v3
+        - name: Install Nodejs
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - name: Install Angular
+          run: npm install -g @angular/cli
+        - name: Install Node Module
+          run: npm install
+        - name: test run
+          run: ng test --browsers MyHeadLessBrowser
+          
