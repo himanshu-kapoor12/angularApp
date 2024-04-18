@@ -15,5 +15,5 @@ jobs:
         - name: Install Node Module
           run: npm install --legacy-peer-deps
         - name: test run
-          run: ng test --browsers MyHeadLessBrowser
+          run: ng test --no-watch --no-progress --browsers=ChromeHeadless
           
