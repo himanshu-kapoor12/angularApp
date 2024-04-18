@@ -13,7 +13,7 @@ jobs:
         - name: Install Angular
           run: npm install -g @angular/cli
         - name: Install Node Module
-          run: npm install
+          run: npm install --legacy-peer-deps
         - name: test run
           run: ng test --browsers MyHeadLessBrowser
           
